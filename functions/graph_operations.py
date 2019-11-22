@@ -17,6 +17,11 @@ def inceident_edgees (G,T):
 def cost (G,e):
     return G[1][e]
 
+
+def initialize tree (v):
+    return (([v],[]))
+
+
 '''   '''
 
 ''' add a min_cost_incident_edge(G,T)
