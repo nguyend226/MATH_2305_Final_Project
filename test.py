@@ -23,4 +23,4 @@ print ('*****')
 T = ([3, 1],[(1, 3)])
 star()
 
-print (inceident_edgees(G,T))
+#print (inceident_edgees(G,T))
