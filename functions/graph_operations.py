@@ -5,4 +5,26 @@ def inceident_edgees (G,T):
             if v in e and e not in T[1]:
                 edges.append(e)
                 #print (e)
+
+
+    
+    #fix the file by the weekend!!!!!!!!!!!!!!!!!!!
+
+    ''' remove edges that make cycles goes in the fuction'''
     return edges
+
+
+def cost (G,e):
+    return G[1][e]
+
+'''   '''
+
+''' add a min_cost_incident_edge(G,T)
+find the min in the list
+
+some type of a comparitor
+
+
+ '''
+
+''' graph cost return the toatl weight of a graph   '''
