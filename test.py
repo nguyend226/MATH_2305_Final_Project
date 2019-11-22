@@ -2,6 +2,9 @@ import numpy as np
 import os
 
 from functions.reading_writing_function import get_graph
+from functions.graph_operations import inceident_edgees
+
+
 def star ():
     print ('*******')
 G = get_graph('G1')
