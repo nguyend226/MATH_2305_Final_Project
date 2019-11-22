@@ -40,7 +40,9 @@ star()
 
 
 
-''' please maka a commit here with you name.
+''' please make a commit here with you name to test you git
+
+John Cruz
 
 
 
