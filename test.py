@@ -31,8 +31,9 @@ star()
 
 #start point on tree ? 
 #T = ([3, 1, 4 ], [(1, 3), (1, 4)])
-T = ([3,1,4], [(1,3), (1,4)])
+#T = ([0,1,3,2], [(0,1), (1,3), (2,3)])
 
+T = ([5], [])
 
 star("all edges")
 for e in G[1]:
@@ -64,7 +65,7 @@ star()
 star('new section incenden testing')
 
 print (f'{inceident_edgees(G,T)}')
-
+#print(f"{g}")
 
 star()
 
