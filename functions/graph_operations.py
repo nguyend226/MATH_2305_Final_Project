@@ -1,5 +1,5 @@
 
-def inceident_edgees (Graph, Tree):
+def incident_edges (Graph, Tree):
     '''Returns all posible edges that are not in the tree. Essentially give you next avalible path to the next vertex. '''
 
     edges_in_tree = []
@@ -38,7 +38,7 @@ def initialize_tree (starting_vertex):
 def min_cost_incident_edge(Graph,Tree):
     ''' Returns the edge with the minimum cost or shortest distance simple find the minimum in an array'''
 
-    all_posible_new_edges = inceident_edgees(Graph,Tree)
+    all_posible_new_edges = incident_edges(Graph,Tree)
     min_e = all_posible_new_edges[0]
 
     for i in all_posible_new_edges:
