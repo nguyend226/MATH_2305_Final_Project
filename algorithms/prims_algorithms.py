@@ -1,4 +1,4 @@
-from functions.graph_operations import min_cost_incident_edge, inceident_edgees, initialize_tree, cost
+from functions.graph_operations import min_cost_incident_edge, incident_edges, initialize_tree, cost
 
 
 def Prims(Graph, Starting_point):
@@ -8,14 +8,14 @@ def Prims(Graph, Starting_point):
     '''
 
     Tree = initialize_tree(Starting_point)
-    a = inceident_edgees(Graph, Tree)
+    a = incident_edges(Graph, Tree)
     path_to_take = min_cost_incident_edge(Graph, Tree)
  
 
     while (len(Tree[0]) != len(Graph[0])):                          #while the length of the tree's vertices is not the same lenght of the graph's vertices than do the operation 
-        avalible_paths = inceident_edgees(Graph, Tree)          
+        available_paths = incident_edges(Graph, Tree)          
     
-        for path in avalible_paths:                                 #Checks all avalible plaths
+        for path in available_paths:                                 #Checks all avalible plaths
     
              if ( path == min_cost_incident_edge(Graph, Tree) ):#    and (path not in ):     #Only allows for the smallest path to be taken and adds that path/edge to our working tree
                 Tree[1].append(path)
