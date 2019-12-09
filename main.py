@@ -7,30 +7,21 @@ from functions.graph_operations import *
 os.system("cls")
 
 
-def star (somestring=''):
-    
-    print (f'****{somestring}****')
-
-#File = input(' get file')
+File = input(' get file')
 
 
 
 
 Graph = get_graph("G1")
-star()
-print (Graph)
-star()
+
+starting_point = int( input(f'{Graph[0]} /n pick a vertex')) 
 
 
+minimum_spanning_tree = Prims(Graph, starting_point)
 
 
-               
-
-
-
-minimum_spanning_tree = Prims(Graph, 0)
-
-total_cost_of_tree = 0
+#def total_cost_of_tree (G, ):
+#total_cost_of_tree = 0
 
 
 for edge in range(0, len( minimum_spanning_tree) + 1 ):
