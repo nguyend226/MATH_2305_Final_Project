@@ -17,7 +17,7 @@ def Prims(Graph, Starting_point):
     
         for path in avalible_paths:                                 #Checks all avalible plaths
     
-             if ( path == min_cost_incident_edge(Graph, Tree)):     #Only allows for the smallest path to be taken and adds that path/edge to our working tree
+             if ( path == min_cost_incident_edge(Graph, Tree) ):#    and (path not in ):     #Only allows for the smallest path to be taken and adds that path/edge to our working tree
                 Tree[1].append(path)
                 
                 for edge in Tree[1]:                                #Runs through all edges in out woring tree 

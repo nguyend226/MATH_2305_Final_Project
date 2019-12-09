@@ -10,7 +10,7 @@ def star (somestring=''):
     print (f'****{somestring}****')
 
 
-G = get_graph('G1')
+G = get_graph('G2')
 
 os.system("cls")
 

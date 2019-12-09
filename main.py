@@ -12,7 +12,7 @@ File = input(' Input name of filr that cotians the graph. :')
 
 
 
-Graph = get_graph("G1") 
+Graph = get_graph(File) 
 
 starting_point = int( input(f' {Graph[0]} \n Pick a vertex. :')) 
 
