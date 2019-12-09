@@ -1,43 +1,49 @@
 
-def inceident_edgees (G,T):
+def inceident_edgees (Graph, Tree):
+    '''Returns all posible edges that are not in the tree. Essentially give you next avalible path to the next vertex. '''
 
     edges_in_tree = []
 
-    for edge in G[1]:
+    for edge in Graph[1]:
 
-        for vertice in T[0]:
+        for vertex in Tree[0]:
 
-            if (vertice in edge) and (edge not in T[1]) and (edge not in edges_in_tree):
+            if (vertex in edge) and (edge not in Tree[1]) and (edge not in edges_in_tree):
                 edges_in_tree.append(edge)
     
     for edge in edges_in_tree:
 
-        for vertice_a in T[0]:
+        for vertex_a in Tree[0]:
 
-            for vertice_b in T[0]:    
+            for vertex_b in Tree[0]:    
 
-                if  ( ( '('+str(vertice_a) + ', ' + str(vertice_b)+')' ) == str(edge)   ): #Dirty fix of formating issues but got it working
+                if  ( ( '('+str(vertex_a) + ', ' + str(vertex_b)+')' ) == str(edge)   ): #Dirty fix of formating issues but got it working.
+                    #If there is a edge that is in the working tree that has two of the vertices in it then remove it,
+                    #by doing so we remove the posibility of have a circle in out tree
                     del edges_in_tree[ edges_in_tree.index(edge) ]
     
     return edges_in_tree
 
 
-def cost (G,e):
-    return G[1][e]
+def cost (Graph,edge):
+    ''' Returns the cost of an edge'''
+    return Graph[1][edge]
 
 
-def initialize_tree (v):
-    return (([v],[]))
+def initialize_tree (starting_vertex):
+    ''' Returns an array that is in a workable format for out other functions while ging us a starting point'''
+    return (([starting_vertex],[]))
 
 
-def min_cost_incident_edge(G,T):
+def min_cost_incident_edge(Graph,Tree):
+    ''' Returns the edge with the minimum cost or shortest distance simple find the minimum in an array'''
 
-    all_posible_new_edges = inceident_edgees(G,T)
+    all_posible_new_edges = inceident_edgees(Graph,Tree)
     min_e = all_posible_new_edges[0]
 
     for i in all_posible_new_edges:
 
-        if ((G[1][min_e] >= G[1][i])):
+        if ((Graph[1][min_e] >= Graph[1][i])):
             min_e = i
 
     return min_e 
