@@ -23,8 +23,8 @@ vertices, edges = minimum_spanning_tree
 
 T =  ([0, 1, 4], [(0, 1), (1, 4)])
 
-print (f'''\n The minimun spanining tree 
- Vetices: {vertices}, {len(vertices)}
+print (f'''\n The minimun spanning tree 
+ Vertices: {vertices}, {len(vertices)}
  Edges : {edges}, {len(edges)}
  and the total cost of the tree {total_cost_of_tree(Graph, minimum_spanning_tree)} 
  ********* prims output **********
