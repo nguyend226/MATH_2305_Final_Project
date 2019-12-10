@@ -19,7 +19,7 @@ cost_of_tree = total_cost_of_tree(Graph, minimum_spanning_tree)
 vertices, edges = minimum_spanning_tree
 
 
-print (f'''\n The minimun spanining tree 
- Vetices: {vertices}, total: {len(vertices)}
+print (f'''\n The minimun spanning tree 
+ Vertices: {vertices}, total: {len(vertices)}
  Edges : {edges}, total: {len(edges)} 
  Total cost of the tree: {total_cost_of_tree(Graph, minimum_spanning_tree)} ''')
