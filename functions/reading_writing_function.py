@@ -4,17 +4,16 @@ def get_graph(textfile):
     
     edgelist = np.loadtxt(f'data/{textfile}.txt', dtype = int ) # Grabs data from the file abd converts it in to workable data.
 
-    G = ([],{})
+    Graph = ([],{})
 
-    for x in edgelist:      # Converts data into workable array/tuple/ditionary
+    for edge in edgelist:      # Converts data into workable array/tuple/ditionary
 
-        if x[0] not in G[0]:
-            G[0].append(x[0])
+        if edge[0] not in Graph[0]:
+            Graph[0].append(edge[0])
 
-        if x[1] not in G[0]:
-            G[0].append(x[1])
+        if edge[1] not in Graph[0]:
+            Graph[0].append(edge[1])
             
+        Graph[1][(edge[0], edge[1])] = edge[2]
 
-        G[1][(x[0], x[1])] = x[2]
-
-    return G
+    return Graph
